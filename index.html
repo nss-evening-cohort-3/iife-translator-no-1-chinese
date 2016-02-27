@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Translator</title>
+</head>
+<body>
+<!-- Your project should have one HTML file that has a textarea, a select element with an option for each language, a button with a label of "Translate", and an empty DOM element into which the translated text will be inserted. -->
+  <center>
+    <div>
+      <input type="text" placeholder="Enter Text" id="input">
+    </div>
+    <br>
+    <div>
+      <select name="Language">
+        <option value="welsh" id="welsh">Welsh</option> 
+        <option value="german" id="german">German</option>
+        <option value="italian" id="italian">Italian</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <button id="button">Translate</button>
+    </div>
+    <br>
+    <div id="output"></div>
+  </center>
+  <script src="script.js"></script>
+  <script src="german.js"></script>
+  <script src="welsh.js"></script>
+  <script src="italian.js"></script>
+</body>
+</html>
