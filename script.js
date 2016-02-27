@@ -1,1 +1,3 @@
-var languageTranslator = {};
+var languageTranslator = (function() {
+  var 
+})
