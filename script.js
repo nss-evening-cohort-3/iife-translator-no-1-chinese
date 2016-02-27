@@ -3,19 +3,15 @@ var button = document.getElementById("button");
 var output = document.getElementById("output");
 var splitInput = userInput.split(" ");
 
-
-// function returnText(userInput){
-// 	var splitInput = userInput.split(" ");
-// 	return splitInput;
-// 	console.log(returnText);
-// }
+var languages = [" ", " "];
 
 var languageTranslator = (function() {
-	if(document.getElementById("dropdown").value == welsh) {
-		languageTranslator.translateToWelsh();
-	}
-}
+  if(document.getElementById("dropdown").value == welsh) {
+    languageTranslator.toWelsh;
+  } else if(document.getElementById("dropdown").value == italian) {
+    languageTranslator.toItalian;
+  } else {
+    languageTranslator.toGerman;
+  }
 
-button.addEventListener("click", languageTranslator(function){
-
-}));
+});
