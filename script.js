@@ -1,17 +1,23 @@
-var userInput = document.getElementById("input").value;
 var button = document.getElementById("button");
-var output = document.getElementById("output");
-var splitInput = userInput.split(" ");
 
-var languages = [" ", " "];
+button.addEventListener("click", translate); 
 
-var languageTranslator = (function() {
-  if(document.getElementById("dropdown").value == welsh) {
-    languageTranslator.toWelsh;
-  } else if(document.getElementById("dropdown").value == italian) {
-    languageTranslator.toItalian;
-  } else {
-    languageTranslator.toGerman;
-  }
+function translate() {
 
-});
+  var userInput = document.getElementById("input").value;
+  var output = document.getElementById("output");
+  var dropdown = document.getElementById("dropdown")
+
+    if(dropdown.value === "welsh") {
+      var finalPhrase = languageTranslator.toWelsh(userInput);
+
+    } else if(dropdown.value === "italian") {
+      finalPhrase = languageTranslator.toItalian(userInput);
+
+    } else if (dropdown.value === "german") {
+      finalPhrase = languageTranslator.toGerman(userInput);
+    };
+
+  output.innerHTML = finalPhrase;
+
+}
