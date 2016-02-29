@@ -1,22 +1,28 @@
-var languageTranslator = (function(origTranslator){
-  var translatedPhrase = [];
+var languageTranslator = (function(originalPhrase){
 
-  var toGerman = {"merry":"Fröhe", 
+  var germanLexicon = {
+  "merry":"Fröhe", 
   "christmas":"Weihnachten", 
   "and":"und", 
   "happy":"Frohes", 
   "new":"neues", 
-  "year":"Jahr"};
+  "year":"Jahr"
+};
 
-  for(var i = 0; i <= translatedText.length; i++) {
-    translatedPhrase.push(toGerman[translatedText[i]]);
+originalPhrase.toGerman = (function(userInput) {
+  var translatedPhrase = [];
 
-    var reducedPhrase = translatedPhrase.reduce(function(prev, current) {
-      return prev + " " + current;
+  var textArray = userInput.split(" ");
+
+  for(var i = 0; i <= textArray.length; i++) {
+    translatedPhrase.push(germanLexicon[textArray[i]])};
+
+    translatedPhrase = translatedPhrase.reduce(function(prev, curr) {
+      return prev + " " + curr;
     });
 
-button.addEventListener("click", languageTranslator(function(event){
-  output.innerHTML = translatedPhrase;
-  };
+return translatedPhrase;
+});
 
-}(languageTranslator || {}));
+return originalPhrase;
+}(languageTranslator || {} ));
