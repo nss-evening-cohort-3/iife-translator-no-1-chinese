@@ -1,4 +1,4 @@
-var languageTranslator = (function (mainTranslator) {
+var languageTranslator = (function (originalPhrase) {
 var welshLexicon = {
 		"merry": "Llawen",
 		"christmas": "Nadolig",
@@ -8,7 +8,6 @@ var welshLexicon = {
 		"year": "Blwyddyn"
 	};
 
-var translatedPhrase = [];
 
 originalPhrase.toWelsh = (function(userInput) {
   var translatedPhrase = [];
@@ -25,5 +24,5 @@ originalPhrase.toWelsh = (function(userInput) {
 return translatedPhrase;
   
   });
-
+return originalPhrase;
 }(languageTranslator || {}));
