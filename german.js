@@ -9,14 +9,14 @@ var languageTranslator = (function(originalPhrase){
   "year":"Jahr"
 };
 
+// german iife
 originalPhrase.toGerman = (function(userInput) {
   var translatedPhrase = [];
-
+// restructure phrase
   var textArray = userInput.split(" ");
 
   for(var i = 0; i < textArray.length; i++) {
     translatedPhrase.push(germanLexicon[textArray[i]])};
-
     translatedPhrase = translatedPhrase.reduce(function(prev, curr) {
       return prev + " " + curr;
     });
