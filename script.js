@@ -4,12 +4,12 @@ button.addEventListener("click", translate);
 
 function translate() {
 
-  var userInput = document.getElementById("input").value;
+  var userInput = document.getElementById("input").value.toLowerCase();
   var output = document.getElementById("output");
-  var dropdown = document.getElementById("dropdown")
+  var dropdown = document.getElementById("dropdown");
 
     if(dropdown.value === "welsh") {
-      var finalPhrase = languageTranslator.toWelsh(userInput);
+      finalPhrase = languageTranslator.toWelsh(userInput);
 
     } else if(dropdown.value === "italian") {
       finalPhrase = languageTranslator.toItalian(userInput);
@@ -19,5 +19,4 @@ function translate() {
     };
 
   output.innerHTML = finalPhrase;
-
 }

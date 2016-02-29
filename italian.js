@@ -26,5 +26,5 @@ var languageTranslator = (function(originalPhrase) {
 return translatedPhrase;
   
   });
-
+return originalPhrase;
 }(languageTranslator || {}));
