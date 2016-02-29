@@ -1,3 +1,4 @@
+// Translator IIFE containing Welsh lexicon
 var languageTranslator = (function (originalPhrase) {
 var welshLexicon = {
 		"merry": "Llawen",
@@ -8,7 +9,7 @@ var welshLexicon = {
 		"year": "Blwyddyn"
 	};
 
-
+// translate function - converts input to a split array, translates each word, then pushes back into a string
 originalPhrase.toWelsh = (function(userInput) {
   var translatedPhrase = [];
   var textArray = userInput.split(" ");
