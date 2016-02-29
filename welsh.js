@@ -1,6 +1,5 @@
 var languageTranslator = (function (mainTranslator) {
-	var translateToWelsh = [];
-	var toWelsh = {
+var welshLexicon = {
 		"merry": "Llawen",
 		"christmas": "Nadolig",
 		"and": "ac",
@@ -9,16 +8,22 @@ var languageTranslator = (function (mainTranslator) {
 		"year": "Blwyddyn"
 	};
 
-for (var i = 0; i < translatedText.length; i++) {
-	translatedText[i]
-};
+var translatedPhrase = [];
 
-// mainTranslator.getWelsh = function() {
-// 	return toWelsh;
-// 	}
+originalPhrase.toWelsh = (function(userInput) {
+  var translatedPhrase = [];
+  var textArray = userInput.split(" ");
+    for (i = 0; i < textArray.length; i++) {
+        translatedPhrase.push(welshLexicon[textArray[i]])
+      };
 
-  return mainTranslator;
+     translatedPhrase = translatedPhrase.reduce(
+      function(prev, curr) {
+        return prev + " " + curr;
+      });
+
+return translatedPhrase;
+  
+  });
+
 }(languageTranslator || {}));
-
-// console.log(languageTranslator.getWelsh());
-
