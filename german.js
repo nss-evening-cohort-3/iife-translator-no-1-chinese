@@ -14,7 +14,7 @@ originalPhrase.toGerman = (function(userInput) {
 
   var textArray = userInput.split(" ");
 
-  for(var i = 0; i <= textArray.length; i++) {
+  for(var i = 0; i < textArray.length; i++) {
     translatedPhrase.push(germanLexicon[textArray[i]])};
 
     translatedPhrase = translatedPhrase.reduce(function(prev, curr) {

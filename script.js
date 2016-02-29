@@ -13,8 +13,8 @@ if(dropdown.value == "welsh") {
     finalPhrase = languageTranslator.toItalian(userInput);
   } else if(dropdown.value == "german") {
     finalPhrase = languageTranslator.toGerman(userInput);
-  }
-};
+    };
+
 
 output.innerHTML = finalPhrase;
 };
